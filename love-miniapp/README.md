@@ -119,6 +119,16 @@ node app.js
 2. 重新导入目录：`love-miniapp`。
 3. 确认项目详情里 `miniprogramRoot = miniprogram/`。
 
+### F. 如果报错 `-80055 Invalid SiteMap`
+
+这个报错是 `sitemap.json` 格式不符合微信要求导致的。当前项目已经修复为标准格式（包含 `rules` 且有有效规则）。
+
+如果你本地仍报错：
+
+1. 确认 `miniprogram/sitemap.json` 内容是最新版本。
+2. 在开发者工具里执行 **清缓存 -> 全部清除**。
+3. 重新编译项目。
+
 ## API 列表
 
 - `POST /api/login`
