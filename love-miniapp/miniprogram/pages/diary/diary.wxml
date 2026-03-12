@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="card">
+    <textarea placeholder="记录今天的甜蜜瞬间..." value="{{content}}" bindinput="onInput" />
+    <button class="btn-primary" bindtap="chooseImages">选择图片（最多3张）</button>
+    <view class="imgs">
+      <image wx:for="{{imagePaths}}" wx:key="*this" src="{{item}}" class="img" />
+    </view>
+    <button class="btn-primary" bindtap="submit">发布日记</button>
+  </view>
+
+  <view class="card" wx:for="{{list}}" wx:key="id">
+    <view class="time">{{item.created_at}}</view>
+    <view class="content">{{item.content}}</view>
+    <view class="imgs">
+      <image wx:for="{{item.images}}" wx:key="*this" src="{{item}}" class="img" />
+    </view>
+  </view>
+</view>

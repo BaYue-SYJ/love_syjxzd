@@ -1,0 +1,23 @@
+page {
+  background: linear-gradient(180deg, #ffe6f2 0%, #fff8fb 100%);
+  color: #333;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 8rpx 24rpx rgba(255, 120, 178, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #ff78b2, #ff9ac6);
+  color: #fff;
+  border-radius: 40rpx;
+}
