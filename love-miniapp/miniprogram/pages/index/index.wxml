@@ -1,0 +1,22 @@
+<view class="hero">
+  <image class="bg" src="{{bgUrl}}" mode="aspectFill" />
+  <view class="mask"></view>
+  <view class="center">
+    <view class="title">💖 我们已经相爱</view>
+    <view class="days">{{loveDays}} 天</view>
+    <view class="avatars" wx:if="{{couple}}">
+      <image class="avatar" src="{{couple.user1_avatar || defaultAvatar}}" />
+      <text class="heart">❤</text>
+      <image class="avatar" src="{{couple.user2_avatar || defaultAvatar}}" />
+    </view>
+    <view class="words">{{couple ? couple.love_words : '去个人中心绑定情侣，开始记录吧～'}}</view>
+  </view>
+</view>
+
+<view class="container nav-grid">
+  <navigator class="card nav-item" url="/pages/timeline/timeline">爱情时间线</navigator>
+  <navigator class="card nav-item" url="/pages/album/album">情侣相册</navigator>
+  <navigator class="card nav-item" url="/pages/anniversary/anniversary">纪念日</navigator>
+  <navigator class="card nav-item" url="/pages/diary/diary">恋爱日记</navigator>
+  <navigator class="card nav-item full" url="/pages/profile/profile">个人中心 / 情侣绑定</navigator>
+</view>

@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <input placeholder="纪念日标题" value="{{form.title}}" data-key="title" bindinput="onInput" />
+    <picker mode="date" value="{{form.date}}" bindchange="onDateChange">
+      <view class="picker">日期：{{form.date || '请选择日期'}}</view>
+    </picker>
+    <picker range="{{types}}" bindchange="onTypeChange">
+      <view class="picker">类型：{{types[form.typeIndex]}}</view>
+    </picker>
+    <button class="btn-primary" bindtap="submit">保存纪念日</button>
+  </view>
+
+  <view class="card" wx:for="{{list}}" wx:key="id">
+    <view class="row">
+      <text class="title">{{item.title}}</text>
+      <text class="tag">{{item.type}}</text>
+    </view>
+    <view>日期：{{item.date}}</view>
+    <view class="countdown">{{item.countdownText}}</view>
+  </view>
+</view>

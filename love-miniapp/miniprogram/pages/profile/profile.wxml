@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card">
+    <view class="title">用户信息</view>
+    <input placeholder="昵称" value="{{nickname}}" bindinput="onNicknameInput" />
+    <input placeholder="头像URL（可选）" value="{{avatar}}" bindinput="onAvatarInput" />
+    <button class="btn-primary" bindtap="login">微信登录</button>
+    <view wx:if="{{user}}">当前用户ID：{{user.id}}，昵称：{{user.nickname}}</view>
+  </view>
+
+  <view class="card">
+    <view class="title">情侣绑定</view>
+    <input placeholder="对方用户ID" value="{{partnerUserId}}" bindinput="onPartnerInput" />
+    <picker mode="date" value="{{startDate}}" bindchange="onDateChange">
+      <view class="picker">恋爱开始日期：{{startDate || '请选择'}}</view>
+    </picker>
+    <textarea placeholder="恋爱宣言" value="{{loveWords}}" bindinput="onWordsInput" />
+    <button class="btn-primary" bindtap="bindCouple">绑定情侣</button>
+  </view>
+</view>

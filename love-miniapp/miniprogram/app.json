@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/timeline/timeline",
+    "pages/album/album",
+    "pages/anniversary/anniversary",
+    "pages/diary/diary",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "情侣爱情记录",
+    "navigationBarBackgroundColor": "#ff78b2",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#fff0f6"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

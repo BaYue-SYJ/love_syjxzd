@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <input placeholder="事件标题" value="{{form.title}}" data-key="title" bindinput="onInput" />
+    <picker mode="date" value="{{form.date}}" bindchange="onDateChange">
+      <view class="picker">日期：{{form.date || '请选择日期'}}</view>
+    </picker>
+    <textarea placeholder="事件内容" value="{{form.content}}" data-key="content" bindinput="onInput" />
+    <button class="btn-primary" bindtap="chooseImage">选择图片</button>
+    <image wx:if="{{form.imagePath}}" class="preview" src="{{form.imagePath}}" />
+    <button class="btn-primary" bindtap="submit">添加事件</button>
+  </view>
+
+  <view class="card" wx:for="{{list}}" wx:key="id">
+    <view class="row">
+      <text class="title">{{item.title}}</text>
+      <text class="date">{{item.date}}</text>
+    </view>
+    <view>{{item.content}}</view>
+    <image wx:if="{{item.image}}" class="preview" src="{{item.image}}" mode="widthFix" />
+  </view>
+</view>

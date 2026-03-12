@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card">
+    <input placeholder="照片描述（可选）" value="{{description}}" bindinput="onDescInput" />
+    <button class="btn-primary" bindtap="uploadPhoto">上传照片</button>
+  </view>
+  <view class="grid">
+    <image class="photo" wx:for="{{list}}" wx:key="id" src="{{item.image_url}}" mode="aspectFill" />
+  </view>
+</view>
