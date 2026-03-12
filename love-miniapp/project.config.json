@@ -1,0 +1,21 @@
+{
+  "description": "情侣爱情记录小程序（根目录导入）",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": false,
+    "enhance": true,
+    "urlCheck": false,
+    "compileHotReLoad": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "trial",
+  "appid": "touristappid",
+  "projectname": "love-miniapp",
+  "miniprogramRoot": "miniprogram/",
+  "simulatorType": "wechat",
+  "condition": {}
+}

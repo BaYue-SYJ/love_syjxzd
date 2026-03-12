@@ -90,7 +90,8 @@ node app.js
 
 1. 打开微信开发者工具。
 2. 选择 **导入项目**。
-3. 项目目录选择：`love-miniapp/miniprogram`。
+3. 项目目录建议选择：`love-miniapp`（根目录，已配置 `miniprogramRoot`）。
+   - 如果你只导入 `miniprogram/` 目录也可以。
 4. `AppID`：
    - 没有小程序资质可先用“测试号”或 `touristappid`（本项目已提供 `project.config.json`）。
 5. 点击导入并编译。
@@ -109,6 +110,14 @@ node app.js
 - 详情 -> 本地设置 -> 勾选 **不校验合法域名、web-view（业务域名）、TLS 版本以及 HTTPS 证书**。
 
 这样本地 `http` 接口就能直接调通。
+
+### E. 如果提示“在项目根目录未找到 app.json”
+
+这是因为导入目录不对或缺少根项目配置。当前仓库已补充根目录 `project.config.json`，请：
+
+1. 在微信开发者工具中删除旧项目。
+2. 重新导入目录：`love-miniapp`。
+3. 确认项目详情里 `miniprogramRoot = miniprogram/`。
 
 ## API 列表
 
